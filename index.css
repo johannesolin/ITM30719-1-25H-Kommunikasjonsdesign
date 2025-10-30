@@ -1,8 +1,12 @@
+/* Hold alt innenfor oppgitt bredde */
+* { box-sizing: border-box; }
+
+
 img{
     max-width: 30%;
 }
 body {
-    max-width: 1000px;   /* maks bredde på innholdet */
+    max-width: 800px;   /* maks bredde på innholdet */
     margin: 0 auto;      /* midtstiller hele siden horisontalt */
     padding: 0 20px;     /* litt luft på sidene */
     font-family: Arial, sans-serif; /* valgfritt – bare for bedre utseende */
@@ -38,18 +42,17 @@ a{
 /* ========================================================= */
 /* Hovedbeholder for selve søylediagrammet */
 .bar-container {
-    /* VIKTIG: Sikrer at ramme og polstring er INNENFOR den definerte bredden */
-    box-sizing: border-box; 
-    max-width:1000px; /* FAST BREDDE: Tvinger frem HORISONTAL rulling i nettleseren */
+    box-sizing: border-box;
+    width: 100%;              /* Fyller hele bredden til forelderen (500px fra body) */
+    max-width: 100%;          /* Ikke bredere enn body */
     display: flex;
-    align-items: flex-end; /* Plasserer søylene nederst */
-    justify-content: flex-start; 
-    padding: 5rem 4rem 3rem 4rem; /* Polstring rundt diagrammet */
-    min-height: 75rem; /* MINIMUM HØYDE: Tvinger frem VERTIKAL rulling i nettleseren */
-    position: relative;
-    background-color: transparent; 
-    border: 1px solid #374151; /* Ytre ramme */
-}
+    align-items: flex-end;
+    justify-content: space-between; /* Fordeler søylene jevnt */
+    padding: 2rem 1rem;       /* Mindre padding for smalere layout */
+    min-height: 30rem;        /* Justér etter behov */
+    background-color: transparent;
+    border: 1px solid #374151;
+  }
 /* Stil for hver individuelle søyle (inkludert tall og tekst) */
 .bar-item {
     position: relative;
