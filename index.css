@@ -82,17 +82,17 @@ body {
 /* HØYDEKLASSER (Basert på data) */
 /* Høydeverdier er skalert for å tvinge frem vertikal rulling */
 /* ========================================================= */
-.bar-height-11 { height: 25rem; }
+.bar-height-11 { height: 10rem; }
 .bar-height-10 { height: 30rem; }
 .bar-height-9  { height: 30rem; }
-.bar-height-8  { height: 30rem; }
+.bar-height-8  { height: 20rem; }
 .bar-height-7  { height: 40rem; }
 .bar-height-6  { height: 50rem; }
 .bar-height-5  { height: 60rem; }
 .bar-height-4  { height: 60rem; }
-.bar-height-3  { height: 65rem; }
-.bar-height-2  { height: 68rem; }
-.bar-height-1  { height: 70rem; }
+.bar-height-3  { height: 80rem; }
+.bar-height-2  { height: 90rem; }
+.bar-height-1  { height: 120rem; }
 /* ========================================================= */
 /* FARGEKLASSER */
 /* ========================================================= */
