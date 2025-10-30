@@ -10,10 +10,101 @@
     <article>
         <h2>Statistikk lyver ikke</h2>
         <p>I 2024 omkom 20 motorsyklister på norske veier. Det er like mange som i 2023. Til sammenligning gikk det totale antallet drepte i trafikken ned (fra 110 til 90). Men tallet for motorsyklistene har dessverre holdt seg stabilt høyt. Hvor farlig er det egentlig? Tallene fra Norge viser at motorsyklister er betydelig overrepresentert i ulykkesstatistikken.</p>
-        <img src="assets/statestikk-døde.png" alt=""> 
-        <p>Oversikt over antall drepte i trafikken 2023 og 2024 publisert av statens vegvesen. <a href="https://www.vegvesen.no/nn/om-oss/presse/aktuelt/2025/01/90-omkomne-i-trafikken-i-2024/"></a></p>
+                <!-- Start: HTML-struktur for statistikk-widget -->
+        <div class="stat-card">
+            
+            <!-- Hovedoverskrift for seksjonen -->
+            <h1 class="title">
+                TRANSPORT 2024
+            </h1>
+            
+            <p class="subtitle">
+                Visualisering av alle transportkategoriene basert på foreløpige tall for 2024.
+            </p>
+            <!-- Wrapper for diagrammet. Ingen funksjonell rulling her. -->
+            <div class="scroll-wrapper">
+            
+                <!-- Søylediagram Container: Hovedelementet med fast bredde (1300px) og ramme -->
+                <div class="bar-container">
+                    <!-- 1. Personbil (33) - Høyest -->
+                    <div class="bar-item">
+                        <p class="bar-label text-blue-300">33</p>
+                        <div class="bar-height-1 bar-segment bg-blue-600"></div>
+                        <p class="bar-category">Personbil</p>
+                    </div>
+                    <!-- 2. MC (15) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-orange-400">15</p>
+                        <div class="bar-height-2 bar-segment bg-orange-600"></div>
+                        <p class="bar-category">MC</p>
+                    </div>
+                    <!-- 3. Varebil/Bobil (12) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-purple-400">12</p>
+                        <div class="bar-height-3 bar-segment bg-purple-600"></div>
+                        <p class="bar-category">Varebil/Bobil</p>
+                    </div>
+                    <!-- 4. Fotgjenger (6) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-emerald-300">6</p>
+                        <div class="bar-height-4 bar-segment bg-emerald-600"></div>
+                        <p class="bar-category">Fotgjenger</p>
+                    </div>
+                    <!-- 5. Sykkel (6) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-red-300">6</p>
+                        <div class="bar-height-5 bar-segment bg-red-600"></div>
+                        <p class="bar-category">Sykkel</p>
+                    </div>
+                    
+                    <!-- 6. Lett MC (5) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-yellow-300">5</p>
+                        <div class="bar-height-6 bar-segment bg-yellow-600"></div>
+                        <p class="bar-category">Lett MC</p>
+                    </div>
+                    <!-- 7. Annet (4) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-cyan-300">4</p>
+                        <div class="bar-height-7 bar-segment bg-cyan-600"></div>
+                        <p class="bar-category">Annet</p>
+                    </div>
+                    
+                    <!-- 8. Tungbil (2) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-pink-300">2</p>
+                        <div class="bar-height-8 bar-segment bg-pink-600"></div>
+                        <p class="bar-category">Tungbil</p>
+                    </div>
+                    <!-- 9. Buss (3) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-indigo-300">3</p>
+                        <div class="bar-height-9 bar-segment bg-indigo-600"></div>
+                        <p class="bar-category">Buss</p>
+                    </div>
+                    <!-- 10. ATV/Trakor (3) -->
+                    <div class="bar-item">
+                        <p class="bar-label text-lime-300">3</p>
+                        <div class="bar-height-10 bar-segment bg-lime-600"></div>
+                        <p class="bar-category">ATV/Trakor</p>
+                    </div>
+                    <!-- 11. Moped (1) - Lavest -->
+                    <div class="bar-item">
+                        <p class="bar-label text-gray-300">1</p>
+                        <div class="bar-height-11 bar-segment bg-gray-600"></div>
+                        <p class="bar-category">Moped</p>
+                    </div>
+                </div>
+                <!-- Slutt på Søylediagram Container -->
+            </div>
+            <!-- Slutt på scroll-wrapper -->
+            
+        </div>
+        <!--kilde brukt for graf: https://gemini.google.com/gem/coding-partner/fc79351742409757-->
+
+        <p>Oversikt over antall drepte i trafikken 2023 og 2024 publisert av statens vegvesen. <a href="https://www.vegvesen.no/nn/om-oss/presse/aktuelt/2025/01/90-omkomne-i-trafikken-i-2024/">"https://www.vegvesen.no/nn/om-oss/presse/aktuelt/2025/01/90-omkomne-i-trafikken-i-2024/"</a></p>
         <img src="assets/drept_motorsykkel.png" alt="">
-        <p>Oversikt over antall drepte og skadede motorsyklister og mopedister 2020-2024 publisert av statens vegvesen. <a href="https://trine.atlas.vegvesen.no"></a></p>
+        <p>Oversikt over antall drepte og skadede motorsyklister og mopedister 2020-2024 publisert av statens vegvesen. <a href="https://trine.atlas.vegvesen.no">"https://www.vegvesen.no/nn/om-oss/presse/aktuelt/2025/01/90-omkomne-i-trafikken-i-2024/"</a></p>
         <h2>Årsakene er fart og svinger</h2>
         <p>Når vi ser nærmere på ulykkene, er det to ting som peker seg ut: utforkjøringer og møteulykker. Over halvparten av de som dør på tunge motorsykler, dør i eneulykker ofte utforkjøringer i svinger.
             Forskning viser at høy fart og risikofylt kjøring, "ekstrematferd" er en årsak i hver tredje dødsulykke med tung motorsykkel.

@@ -1,3 +1,123 @@
 img{
     max-width: 30%;
 }
+/* GRUNNLEGGENDE OPPSETT OG STRUKTUR */
+/* ========================================================= */
+.stat-card {
+    /* Hovedbeholder for hele widgeten. Transparent bakgrunn. */
+    width: 100%;
+    background-color: transparent; 
+    box-shadow: none; 
+    color: white; 
+    font-family: sans-serif; /* Bruker standard skrifttype */
+}
+/* Stil for seksjonens hovedoverskrift */
+.title {
+    font-size: 2.25rem; 
+    font-weight: 800; 
+    margin-bottom: 0.5rem;
+    border-bottom: 4px solid #10b981; /* Grønn bunnlinje */
+    padding-bottom: 0.5rem;
+    display: inline-block; 
+    margin-left: 2.5rem; 
+}
+/* Stil for undertekst/beskrivelse */
+.subtitle {
+    color: #9ca3af; /* Lys grå tekst */
+    margin-bottom: 1rem;
+    margin-left: 2.5rem; 
+}
+/* ========================================================= */
+/* DIAGRAM OG SØYLER */
+/* ========================================================= */
+/* Hovedbeholder for selve søylediagrammet */
+.bar-container {
+    /* VIKTIG: Sikrer at ramme og polstring er INNENFOR den definerte bredden */
+    box-sizing: border-box; 
+    width: 1300px; /* FAST BREDDE: Tvinger frem HORISONTAL rulling i nettleseren */
+    display: flex;
+    align-items: flex-end; /* Plasserer søylene nederst */
+    justify-content: flex-start; 
+    padding: 5rem 4rem 3rem 4rem; /* Polstring rundt diagrammet */
+    min-height: 75rem; /* MINIMUM HØYDE: Tvinger frem VERTIKAL rulling i nettleseren */
+    position: relative;
+    background-color: transparent; 
+    border: 1px solid #374151; /* Ytre ramme */
+}
+/* Stil for hver individuelle søyle (inkludert tall og tekst) */
+.bar-item {
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-end;
+    width: 80px; 
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: center;
+}
+/* Dataetikett (Tallet over søylen) */
+.bar-label {
+    position: absolute;
+    top: 0;
+    font-size: 1.25rem; 
+    transform: translateY(-100%); /* Flytter tallet over søylens topp */
+    margin-bottom: 0.5rem;
+    white-space: nowrap; 
+}
+/* Kategori Etikett (Teksten under søylen) */
+.bar-category {
+    font-size: 0.75rem; 
+    font-weight: 600; 
+    color: #d1d5db; 
+    margin-top: 0.75rem; 
+    white-space: nowrap;
+    /* Roterer teksten for å unngå overlapping når den er tettpakket */
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+/* Selve søyledelen */
+.bar-segment {
+    width: 40px; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); 
+}
+/* ========================================================= */
+/* HØYDEKLASSER (Basert på data) */
+/* Høydeverdier er skalert for å tvinge frem vertikal rulling */
+/* ========================================================= */
+.bar-height-11 { height: 25rem; }
+.bar-height-10 { height: 30rem; }
+.bar-height-9  { height: 30rem; }
+.bar-height-8  { height: 30rem; }
+.bar-height-7  { height: 40rem; }
+.bar-height-6  { height: 50rem; }
+.bar-height-5  { height: 60rem; }
+.bar-height-4  { height: 60rem; }
+.bar-height-3  { height: 65rem; }
+.bar-height-2  { height: 68rem; }
+.bar-height-1  { height: 70rem; }
+/* ========================================================= */
+/* FARGEKLASSER */
+/* ========================================================= */
+.text-blue-300 { color: #93c5fd; }
+.bg-blue-600 { background-color: #2563eb; }
+.text-orange-400 { color: #fb923c; }
+.bg-orange-600 { background-color: #ea580c; }
+.text-purple-400 { color: #c084fc; }
+.bg-purple-600 { background-color: #9333ea; }
+.text-emerald-300 { color: #6ee7b7; }
+.bg-emerald-600 { background-color: #059669; }
+.text-red-300 { color: #fca5a5; }
+.bg-red-600 { background-color: #dc2626; }
+.text-yellow-300 { color: #fde047; }
+.bg-yellow-600 { background-color: #eab308; }
+.text-cyan-300 { color: #67e8f9; }
+.bg-cyan-600 { background-color: #06b6d4; }
+.text-pink-300 { color: #f9a8d4; }
+.bg-pink-600 { background-color: #db2777; }
+.text-indigo-300 { color: #a5b4fc; }
+.bg-indigo-600 { background-color: #4f46e5; }
+.text-lime-300 { color: #bef264; }
+.bg-lime-600 { background-color: #65a30d; }
+.text-gray-300 { color: #d1d5db; }
+.bg-gray-600 { background-color: #4b5563; }
