@@ -6,10 +6,19 @@ body {
     margin: 0 auto;      /* midtstiller hele siden horisontalt */
     padding: 0 20px;     /* litt luft på sidene */
     font-family: Arial, sans-serif; /* valgfritt – bare for bedre utseende */
-    background-color: #f9f9f9;      /* valgfritt */
+    background-color: #002c50;      /* valgfritt */
   }
 
+p{
+    color: #f3f0f0;
+}
+h1,h2,h3{
+    color: #f3f0f0;
+}
 
+a{
+    color: rgb(101, 140, 201);
+}
 
 
 
