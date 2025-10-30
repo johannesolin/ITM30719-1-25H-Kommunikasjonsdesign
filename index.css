@@ -1,7 +1,19 @@
 img{
     max-width: 30%;
 }
-/* GRUNNLEGGENDE OPPSETT OG STRUKTUR */
+body {
+    max-width: 1000px;   /* maks bredde på innholdet */
+    margin: 0 auto;      /* midtstiller hele siden horisontalt */
+    padding: 0 20px;     /* litt luft på sidene */
+    font-family: Arial, sans-serif; /* valgfritt – bare for bedre utseende */
+    background-color: #f9f9f9;      /* valgfritt */
+  }
+
+
+
+
+
+/* GRUNNLEGGENDE OPPSETT OG STRUKTUR CHART*/
 /* ========================================================= */
 .stat-card {
     /* Hovedbeholder for hele widgeten. Transparent bakgrunn. */
@@ -11,22 +23,7 @@ img{
     color: white; 
     font-family: sans-serif; /* Bruker standard skrifttype */
 }
-/* Stil for seksjonens hovedoverskrift */
-.title {
-    font-size: 2.25rem; 
-    font-weight: 800; 
-    margin-bottom: 0.5rem;
-    border-bottom: 4px solid #10b981; /* Grønn bunnlinje */
-    padding-bottom: 0.5rem;
-    display: inline-block; 
-    margin-left: 2.5rem; 
-}
-/* Stil for undertekst/beskrivelse */
-.subtitle {
-    color: #9ca3af; /* Lys grå tekst */
-    margin-bottom: 1rem;
-    margin-left: 2.5rem; 
-}
+
 /* ========================================================= */
 /* DIAGRAM OG SØYLER */
 /* ========================================================= */
@@ -34,7 +31,7 @@ img{
 .bar-container {
     /* VIKTIG: Sikrer at ramme og polstring er INNENFOR den definerte bredden */
     box-sizing: border-box; 
-    width: 1300px; /* FAST BREDDE: Tvinger frem HORISONTAL rulling i nettleseren */
+    max-width:1000px; /* FAST BREDDE: Tvinger frem HORISONTAL rulling i nettleseren */
     display: flex;
     align-items: flex-end; /* Plasserer søylene nederst */
     justify-content: flex-start; 
