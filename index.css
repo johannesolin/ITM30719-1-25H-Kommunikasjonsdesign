@@ -5,6 +5,9 @@
 img{
     max-width: 30%;
 }
+video{
+    max-width: 800px;
+}
 body {
     max-width: 800px;   /* maks bredde på innholdet */
     margin: 0 auto;      /* midtstiller hele siden horisontalt */
