@@ -1,5 +1,8 @@
 /* Hold alt innenfor oppgitt bredde */
-* { box-sizing: border-box; }
+* {
+box-sizing: border-box; 
+font-family: sans-serif;
+}
 
 
 img, video{
@@ -18,7 +21,7 @@ body {
 
 p{
     color: #f3f0f0;
-    margin: 5px;
+    letter-spacing: 0.5px;
 }
 
 .undertekst{
