@@ -2,8 +2,8 @@
 * { box-sizing: border-box; }
 
 
-img{
-    max-width: 30%;
+img, video{
+    width: 100%;
 }
 video{
     max-width: 800px;
@@ -19,6 +19,12 @@ body {
 p{
     color: #f3f0f0;
 }
+
+.undertekst{
+    color: lightgrey;
+    font-size: smaller;
+}
+
 h1,h2,h3{
     color: #f3f0f0;
 }
