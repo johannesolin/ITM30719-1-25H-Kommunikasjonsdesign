@@ -18,6 +18,7 @@ body {
 
 p{
     color: #f3f0f0;
+    margin: 5px;
 }
 
 .undertekst{
@@ -41,7 +42,9 @@ a{
     margin-bottom: 1rem;
   }
 
-
+p.bar-category{
+    margin: 0;
+}
 
 /* GRUNNLEGGENDE OPPSETT OG STRUKTUR CHART*/
 /* ========================================================= */
@@ -69,6 +72,8 @@ a{
     min-height: 30rem;        /* Justér etter behov */
     background-color: transparent;
     border: 1px solid #374151;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 /* Stil for hver individuelle søyle (inkludert tall og tekst) */
 .bar-item {
@@ -99,7 +104,7 @@ a{
     margin-top: 0.75rem; 
     white-space: nowrap;
     /* Roterer teksten for å unngå overlapping når den er tettpakket */
-    transform: rotate(-45deg);
+    transform: rotate(-35deg);
     transform-origin: top right;
 }
 /* Selve søyledelen */
