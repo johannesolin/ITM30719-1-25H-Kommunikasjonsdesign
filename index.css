@@ -27,6 +27,14 @@ a{
     color: rgb(101, 140, 201);
 }
 
+#map {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
 
 
 /* GRUNNLEGGENDE OPPSETT OG STRUKTUR CHART*/

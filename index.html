@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kommunikasjonsdesign Nettside for Eksamen</title>
     <link rel="stylesheet" href="index.css">
+     <!-- Leaflet sin CSS -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+    />
+
+    <!-- Leaflet sin JS -->
+    <script
+    defer
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <!--kartkode-->
+  <script defer src="map.js"></script>
 </head>
 <body>
     <article>
@@ -18,6 +36,9 @@
 
         <p>Ulykken skjedde på en veistrekke som er omtalt som en veldig krevende og risikofylt vei. Bare noen måneder tidligere hadde det vært en annen ulykke i samme området, etter disse ulykkende bare måneder mellom hverandre har både politiet og Statens vegvesen begynt å kartlegge årsakene og eventuelle sikkerhetstiltak som skal gjøres på dette strekket.</p>
         
+        <!-- kart av ulykkessted -->
+        <div id="map" aria-label="Interaktivt kart"></div>
+
         <img src="assets/Bilder/eks2.jpg" alt="bilde av ulykkestedet dekorert med blomster og et kors">
         <p>Et bilde av ulykkestedet dekorert med blomster og et kors</p>
 
