@@ -4,6 +4,19 @@ box-sizing: border-box;
 font-family: sans-serif;
 }
 
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 20rem;
+    font-weight: bold;
+  }
+
+.map-beholder{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 img, video{
     width: 100%;
@@ -178,3 +191,7 @@ p.bar-category{
     padding-bottom: 4rem;
   }
   
+  .space{
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+  }
