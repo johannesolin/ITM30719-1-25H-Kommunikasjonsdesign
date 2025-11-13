@@ -24,6 +24,8 @@
 
   <!--kartkode-->
   <script defer src="map.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <article class="animationWindow">
@@ -159,7 +161,9 @@
         <!--kilde brukt for graf: https://gemini.google.com/gem/coding-partner/fc79351742409757-->
 
         <p class="undertekst">Oversikt over antall drepte i trafikken 2023 og 2024 publisert av statens vegvesen. <a href="https://www.vegvesen.no/nn/om-oss/presse/aktuelt/2025/01/90-omkomne-i-trafikken-i-2024/">"https://www.vegvesen.no/nn/om-oss/presse/aktuelt/2025/01/90-omkomne-i-trafikken-i-2024/"</a></p>
-        <img src="assets/drept_motorsykkel.png" alt="">
+        <div class="graf-wrapper">
+            <canvas id="trafikkGraf"></canvas>
+        </div>
         <p class="undertekst">Oversikt over antall drepte og skadede motorsyklister og mopedister 2020-2024 publisert av statens vegvesen. <a href="https://trine.atlas.vegvesen.no">"https://www.vegvesen.no/nn/om-oss/presse/aktuelt/2025/01/90-omkomne-i-trafikken-i-2024/"</a></p>
         
         <h3>Årsakene er fart og svinger</h3>
@@ -177,7 +181,9 @@
         
     </article>
 
-    <div class="box"><h2>Personer som Erik.</h2>
+
+   
+    <div class="box" id="erik-article"><h2>Personer som Erik.</h2>
     <img src="assets/Bilder/1.JPG" alt=""> <!--bytte ut dette med bilde av erik-->
     </div>
 
@@ -197,8 +203,11 @@
 
         <p>Bak gatene i Halden hører man fortsatt motoren ruses, Erik har ingen planer om å parkere sykkelen. For han er friheten bak styret på motorsykkelen verdt mer enn reglene som skal følges. Han sier han skal ta lappen en dag. Men inntil den tid fortsetter han som før «<em>Jeg klarer ikke å la være</em>» sier han, og fortsetter å kjøre videre. Men hjemme sitter en bekymret familie.</p>
     </article>
+    <div id="color-end"></div>
 
 
     <script src="showBox.js"></script>
+    <script src="trafikkGraf.js"></script>
+    <script src="colorTrigger.js"></script>
 </body>
 </html>
