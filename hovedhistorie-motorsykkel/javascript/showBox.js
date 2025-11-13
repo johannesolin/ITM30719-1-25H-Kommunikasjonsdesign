@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(
   },
   {
     // gjør synlig-området veldig lite nederst
-    rootMargin: '0px 0px -85% 0px', // du kan prøve -90% også
+    rootMargin: '0px 0px -15% 0px', 
     threshold: 0
   }
 );
