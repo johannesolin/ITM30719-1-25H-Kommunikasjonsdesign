@@ -1,3 +1,5 @@
+// her er samtalen med ai som er brukt for å lage colorTrigger.js ChatGPT: https://chatgpt.com/share/6915bfd2-e1d8-8003-a2e1-271096d2ae8e
+
 document.addEventListener("DOMContentLoaded", () => {
     const erikArticle = document.querySelector("#erik-article");
     if (!erikArticle) return;
