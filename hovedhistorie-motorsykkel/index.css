@@ -187,8 +187,12 @@ p.bar-category{
   
   /* selve første artikkelen som har alle boxene */
   .animationWindow {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     padding-top: 2rem;
     padding-bottom: 4rem;
+
   }
   
   .space{
