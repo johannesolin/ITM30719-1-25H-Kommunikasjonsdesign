@@ -7,9 +7,14 @@ font-family: sans-serif;
 h1 {
     font-size: 4rem;
     text-align: center;
-    margin-top: 10rem;
-    margin-bottom: 20rem;
+    /* margin-top: 10rem;
+    margin-bottom: 30rem; */
     font-weight: bold;
+  }
+  .scroll-ned{
+    margin-top: 10rem;
+    margin-bottom: 25rem;
+    text-align: center;
   }
 
 .map-beholder{
