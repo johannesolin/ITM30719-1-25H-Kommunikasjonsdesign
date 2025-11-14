@@ -29,11 +29,11 @@ img, video {
 }
 
 body {
-    max-width: 800px;   /* maks bredde på innholdet */
-    margin: 0 auto;      /* midtstiller hele siden horisontalt */
-    padding: 0 20px;     /* litt luft på sidene */
-    font-family: Arial, sans-serif; /* valgfritt – bare for bedre utseende */
-    background-color: #002c50;      /* valgfritt */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    background-color: #002c50; 
   }
 
 p{
