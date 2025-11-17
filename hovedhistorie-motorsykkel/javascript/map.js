@@ -1,7 +1,5 @@
-//kode tatt fra: https://leafletjs.com
 // Oppretter kartet
-const map = L.map('map').setView([51.505, -0.09], 13);
-
+const map = L.map('map').setView([59.818708, 11.243216], 16);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
@@ -10,7 +8,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Markøren
-L.marker([59.8330, 11.2408])
+L.marker([59.818708, 11.243216])
   .addTo(map)
   .bindPopup('Ulykkessted – Riksvei 22 øst for Lillestrøm')
   .openPopup();
