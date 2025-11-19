@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kort Historie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="hero" id="top">
+        <h1>Jakturen</h1>
+        <p class="tagline">Tre kompiser på rypejakt i Alta</p>
+        <figure class="panel-image hero-image">
+            <img src="bilderalta/panelhero.png" alt="Tre kompiser på vidda med hunden foran fjellene">
+        </figure>
+        <a class="scroll-cue" href="#panel-1">Følg historien ↓</a>
+    </header>
+
+    <main class="scrollytelling" aria-label="Historical scrollytelling experience">
+        <section class="story-panel" id="panel-1">
+            <div class="panel-content">
+                <p class="panel-kicker">Grytidlig avreise</p>
+                <h3>Kaffe i mørket</h3>
+                <p class="panel-lede">Klokka er bikker fire når Thomas starter bilen. Alta sentrum er par lyktestolper bak dem. Syver sover mot vinduet, Magnus leker med hunden, og termoslokket går på rundgang i bilen. Som om det skulle vært en uskreven avtale. </p>
+                <p class="panel-meta">Motorvarmen mot fjellkulda.</p>
+            </div>
+        </section>
+
+        <section class="story-panel" id="panel-2">
+            <div class="panel-content">
+                <p class="panel-kicker">Lyset våkner</p>
+                <h2>Opp på vidda</h2>
+                <p class="panel-lede">Thomas parker på en tom slette. Før han rekker å sette bilen i park, har Syver åpnet opp bak og funnet frem hagla. Kort tid etter, forsvinner gjengen over vidda. Pusteskyer blander seg med tåka. Altaelva ligger langt bak dem nå.</p>
+                <p class="panel-meta">Første spor av rypevinger tegner seg i fokksnøen.</p>
+            </div>
+        </section>
+
+        <section class="story-panel" id="panel-3">
+            <div class="panel-content">
+                <p class="panel-kicker">Se turen bevege seg</p>
+                <h2>Video fra dagen</h2>
+                <p class="panel-lede">Solen skinner </p>
+                <div class="media-frame" role="region" aria-labelledby="video-title">
+                    <h4 id="video-title">Video fra rypejakten</h4>
+                    <video class="panel-video" controls preload="metadata" poster="bilderalta/panel2bk.png">
+                        <source src="bilderalta/IMG_9346-1.mp4" type="video/mp4">
+                        Nettleseren din støtter ikke videoavspilling. <a href="bilderalta/IMG_9346-1.mp4">Last ned videoen</a>.
+                    </video>
+                    <p class="video-caption">Et glimt av terrenget.</p>
+                </div>
+                <p class="panel-meta">Video-fil</p>
+            </div>
+        </section>
+
+        <section class="story-panel" id="panel-4">
+            <div class="panel-content">
+                <p class="panel-kicker">Finne flokken</p>
+                <h2>Fjær og fotspor</h2>
+                <p class="panel-lede">Magnus stopper plutselig, løfter hånda og peker på en flekk med fjær. Rundt dem er det små kratre, en hel frokostplass for rypene. De legger en plan: Thomas tar høyden, Syver sikter langs bjørkekanten, Magnus holder hunden tilbake.</p>
+                <ul class="panel-facts">
+                    <li>Vinden stryker fra nordvest og bærer med seg lukten av lyng.</li>
+                    <li>Hver ryggsekk rasler av patroner, nok ammunisjon til å starte en liten krig.</li>
+                    <li>Ikke en eneste lyd, pulsen øker, blodet pumper</li>
+                </ul>
+                <figure class="panel-image">
+                    <img src="bilderalta/panel4.png" alt="Thomas og Magnus speider etter rypene over vidda">
+                </figure>
+                <p class="panel-meta">Inntar posisjon</p>
+            </div>
+        </section>
+
+        <section class="story-panel" id="panel-5">
+            <div class="panel-content">
+                <p class="panel-kicker">Sekundet</p>
+                <h2>Rypa letter</h2>
+                <p class="panel-lede">Det første vingesuset er lavt, så eksploderer hele haugen i hvitt. Syver kjenner skuldra låse seg rundt kolben og følger fuglen som skjærer ut til høyre. Sikringen blir dyttet frem. </p>
+                 <!-- Shot-audio, kode fra Chatgpt (link kommer) -->
+                <div class="shot-audio" role="region" aria-labelledby="shot-audio-title"> 
+                    <div class="shot-visual" aria-hidden="true">
+                        <span class="wave wave-one"></span>
+                        <span class="wave wave-two"></span>
+                        <span class="wave wave-three"></span>
+                        <span class="shot-dot"></span>
+                    </div>
+                    <div class="shot-details">
+                        <p id="shot-audio-title">Hør skuddet</p>
+                        <audio controls preload="auto">
+                            <source src="bilderalta/skuddlyd.mp3" type="audio/mpeg">
+                            Nettleseren din støtter ikke lydavspilling. <a href="bilderalta/skuddlyd.mp3">Last ned skuddlyden</a>.
+                        </audio>
+                        <p class="shot-caption">Et kort smell fra panikkens sekund.</p>
+                    </div>
+                </div>
+                <p class="panel-meta">Røyken fra løpet lukter metall og fjelllyng.</p>
+            </div>
+        </section>
+
+        <section class="story-panel" id="panel-6">
+            <div class="panel-content">
+                <p class="panel-kicker">Beviset</p>
+                <h2>Syver holder rypa</h2>
+                <p class="panel-lede">Magnus jubler først, Thomas kommer løpende med kameraet, men Syver står stille. Han løfter rypa varsomt, fingrene hans hviler på fjærene som om de er skjøre. I ansiktet hans blander stolthet seg med respekt for fuglen de kom for.</p>
+                <ul class="panel-facts">
+                    <li>Hunden peser tilfreds i skyggen av en lav bjørk.</li>
+                    <li>De snakker lavt, som om vidda hører alt.</li>
+                </ul>
+                <figure class="panel-image">
+                    <img src="bilderalta/panel6.png" alt="Syver holder opp rypa mens vennene jubler">
+                </figure>
+                <p class="panel-meta">Et bilde de vet allerede blir et minne på veggen.</p>
+            </div>
+        </section>
+
+        <section class="story-panel" id="panel-7">
+            <div class="panel-content">
+                <p class="panel-kicker">Pause med utsikt</p>
+                <h2>Matpause</h2>
+                <p class="panel-lede">De graver ut en lun krok og fyrer på en liten primus. På menyen idag er det rypebryst, flatbrød og brunost. Latteren tar over, de går gjennom skuddet gang på gang, hver gang med nye detaljer.</p>
+                <figure class="panel-image">
+                    <img src="bilderalta/panel7.png" alt="Kompiser rundt bålet med gryte på snødekket bakke">
+                </figure>
+                <p class="panel-meta">Lukten av kaffe og kruttslam smelter sammen.</p>
+            </div>
+        </section>
+
+        <section class="story-panel" id="panel-8">
+            <div class="panel-content">
+                <p class="panel-kicker">Hjemturen</p>
+                <h2>Nordlys over Alta</h2>
+                <p class="panel-lede">Når mørket faller, ruller de tilbake mot byen mens nordlyset danser over Karasjokveien. Thomas lover å sende bildene, Magnus teller patroner og planlegger neste tur, Syver sitter bak og holder rypa som en trofé.</p>
+                <ul class="panel-facts">
+                    <li>Radioen spiller lavt, nesten overdøvet av vinterdekkene.</li>
+                    <li>I speilet glitrer snøen etter billyktene.</li>                  
+                </ul>
+                <p class="panel-meta">Historien fortsetter når bildene får plass på veggen hjemme.</p>
+                <a class="scroll-cue secondary" href="#top">Til toppen ↑</a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <small>&copy; Design utviklet med hjelp av Github Co-pilot.</small>
+    </footer>
+</body>
+</html>
