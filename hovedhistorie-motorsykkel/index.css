@@ -1,85 +1,86 @@
 /* Hold alt innenfor oppgitt bredde */
 * {
-box-sizing: border-box; 
-font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 h1 {
-    font-size: 4rem;
-    text-align: center;
-    /* margin-top: 10rem;
+  font-size: 4rem;
+  text-align: center;
+  /* margin-top: 10rem;
     margin-bottom: 30rem; */
-    font-weight: bold;
-  }
-  .scroll-ned{
-    margin-top: 10rem;
-    margin-bottom: 25rem;
-    text-align: center;
-  }
-
-.map-beholder{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  font-weight: bold;
+}
+.scroll-ned {
+  margin-top: 10rem;
+  margin-bottom: 25rem;
+  text-align: center;
 }
 
+.map-beholder {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-
-img, video {
-    width: 90%;
-    max-width: 700px;
-    margin: 1.5rem;
-    display: block;
-    border-radius: 8px;
+img,
+video {
+  width: 90%;
+  max-width: 700px;
+  margin: 1.5rem;
+  display: block;
+  border-radius: 8px;
 }
 
 body {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-    font-family: Arial, sans-serif;
-    background-color: #002c50; 
-  }
-
-p{
-    color: #f3f0f0;
-    letter-spacing: 0.5px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  background-color: #002c50;
 }
 
-.undertekst{
-    color: lightgrey;
-    font-size: smaller;
+p {
+  color: #f3f0f0;
+  letter-spacing: 0.5px;
 }
 
-h1,h2,h3{
-    color: #f3f0f0;
+.undertekst {
+  color: lightgrey;
+  font-size: smaller;
 }
 
-a{
-    color: rgb(101, 140, 201);
+h1,
+h2,
+h3 {
+  color: #f3f0f0;
+}
+
+a {
+  color: rgb(101, 140, 201);
 }
 
 #map {
-    height: 400px;
-    width: 100%;
-    border: 1px solid #ccc;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
+  height: 400px;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
-p.bar-category{
-    margin: 0;
+p.bar-category {
+  margin: 0;
 }
 
 /* GRUNNLEGGENDE OPPSETT OG STRUKTUR CHART*/
 /* ========================================================= */
 .stat-card {
-    /* Hovedbeholder for hele widgeten. Transparent bakgrunn. */
-    width: 100%;
-    background-color: transparent; 
-    box-shadow: none; 
-    color: white; 
-    font-family: sans-serif; /* Bruker standard skrifttype */
+  /* Hovedbeholder for hele widgeten. Transparent bakgrunn. */
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  color: white;
+  font-family: sans-serif; /* Bruker standard skrifttype */
 }
 
 /* ========================================================= */
@@ -87,124 +88,195 @@ p.bar-category{
 /* ========================================================= */
 /* Hovedbeholder for selve søylediagrammet */
 .bar-container {
-    box-sizing: border-box;
-    width: 100%;              /* Fyller hele bredden til forelderen (500px fra body) */
-    max-width: 100%;          /* Ikke bredere enn body */
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between; /* Fordeler søylene jevnt */
-    padding: 2rem 1rem;       /* Mindre padding for smalere layout */
-    min-height: 30rem;        /* Justér etter behov */
-    background-color: transparent;
-    border: 1px solid #374151;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
+  box-sizing: border-box;
+  width: 100%; /* Fyller hele bredden til forelderen (500px fra body) */
+  max-width: 100%; /* Ikke bredere enn body */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between; /* Fordeler søylene jevnt */
+  padding: 2rem 1rem; /* Mindre padding for smalere layout */
+  min-height: 30rem; /* Justér etter behov */
+  background-color: transparent;
+  border: 1px solid #374151;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 /* Stil for hver individuelle søyle (inkludert tall og tekst) */
 .bar-item {
-    position: relative;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: flex-end;
-    width: 80px; 
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
 }
 /* Dataetikett (Tallet over søylen) */
 .bar-label {
-    position: absolute;
-    top: 0;
-    font-size: 1.25rem; 
-    transform: translateY(-100%); /* Flytter tallet over søylens topp */
-    margin-bottom: 0.5rem;
-    white-space: nowrap; 
+  position: absolute;
+  top: 0;
+  font-size: 1.25rem;
+  transform: translateY(-100%); /* Flytter tallet over søylens topp */
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 /* Kategori Etikett (Teksten under søylen) */
 .bar-category {
-    font-size: 0.75rem; 
-    font-weight: 600; 
-    color: #d1d5db; 
-    margin-top: 0.75rem; 
-    white-space: nowrap;
-    /* Roterer teksten for å unngå overlapping når den er tettpakket */
-    transform: rotate(-35deg);
-    transform-origin: top right;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #d1d5db;
+  margin-top: 0.75rem;
+  white-space: nowrap;
+  /* Roterer teksten for å unngå overlapping når den er tettpakket */
+  transform: rotate(-35deg);
+  transform-origin: top right;
 }
 /* Selve søyledelen */
 .bar-segment {
-    width: 40px; 
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); 
+  width: 40px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.06);
 }
 /* ========================================================= */
 /* HØYDEKLASSER (Basert på data) */
 /* Høydeverdier er skalert for å tvinge frem vertikal rulling */
 /* ========================================================= */
-.bar-height-11 { height: 10rem; }
-.bar-height-10 { height: 30rem; }
-.bar-height-9  { height: 30rem; }
-.bar-height-8  { height: 20rem; }
-.bar-height-7  { height: 40rem; }
-.bar-height-6  { height: 50rem; }
-.bar-height-5  { height: 60rem; }
-.bar-height-4  { height: 60rem; }
-.bar-height-3  { height: 80rem; }
-.bar-height-2  { height: 90rem; }
-.bar-height-1  { height: 120rem; }
+.bar-height-11 {
+  height: 10rem;
+}
+.bar-height-10 {
+  height: 30rem;
+}
+.bar-height-9 {
+  height: 30rem;
+}
+.bar-height-8 {
+  height: 20rem;
+}
+.bar-height-7 {
+  height: 40rem;
+}
+.bar-height-6 {
+  height: 50rem;
+}
+.bar-height-5 {
+  height: 60rem;
+}
+.bar-height-4 {
+  height: 60rem;
+}
+.bar-height-3 {
+  height: 80rem;
+}
+.bar-height-2 {
+  height: 90rem;
+}
+.bar-height-1 {
+  height: 120rem;
+}
 /* ========================================================= */
 /* FARGEKLASSER */
 /* ========================================================= */
-.text-blue-300 { color: #93c5fd; }
-.bg-blue-600 { background-color: #2563eb; }
-.text-orange-400 { color: #fb923c; }
-.bg-orange-600 { background-color: #ea580c; }
-.text-purple-400 { color: #c084fc; }
-.bg-purple-600 { background-color: #9333ea; }
-.text-emerald-300 { color: #6ee7b7; }
-.bg-emerald-600 { background-color: #059669; }
-.text-red-300 { color: #fca5a5; }
-.bg-red-600 { background-color: #dc2626; }
-.text-yellow-300 { color: #fde047; }
-.bg-yellow-600 { background-color: #eab308; }
-.text-cyan-300 { color: #67e8f9; }
-.bg-cyan-600 { background-color: #06b6d4; }
-.text-pink-300 { color: #f9a8d4; }
-.bg-pink-600 { background-color: #db2777; }
-.text-indigo-300 { color: #a5b4fc; }
-.bg-indigo-600 { background-color: #4f46e5; }
-.text-lime-300 { color: #bef264; }
-.bg-lime-600 { background-color: #65a30d; }
-.text-gray-300 { color: #d1d5db; }
-.bg-gray-600 { background-color: #4b5563; }
+.text-blue-300 {
+  color: #93c5fd;
+}
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+.text-orange-400 {
+  color: #fb923c;
+}
+.bg-orange-600 {
+  background-color: #ea580c;
+}
+.text-purple-400 {
+  color: #c084fc;
+}
+.bg-purple-600 {
+  background-color: #9333ea;
+}
+.text-emerald-300 {
+  color: #6ee7b7;
+}
+.bg-emerald-600 {
+  background-color: #059669;
+}
+.text-red-300 {
+  color: #fca5a5;
+}
+.bg-red-600 {
+  background-color: #dc2626;
+}
+.text-yellow-300 {
+  color: #fde047;
+}
+.bg-yellow-600 {
+  background-color: #eab308;
+}
+.text-cyan-300 {
+  color: #67e8f9;
+}
+.bg-cyan-600 {
+  background-color: #06b6d4;
+}
+.text-pink-300 {
+  color: #f9a8d4;
+}
+.bg-pink-600 {
+  background-color: #db2777;
+}
+.text-indigo-300 {
+  color: #a5b4fc;
+}
+.bg-indigo-600 {
+  background-color: #4f46e5;
+}
+.text-lime-300 {
+  color: #bef264;
+}
+.bg-lime-600 {
+  background-color: #65a30d;
+}
+.text-gray-300 {
+  color: #d1d5db;
+}
+.bg-gray-600 {
+  background-color: #4b5563;
+}
 
 /* dette har du nok fra før, men vi strammer det litt */
 .box {
-    margin-bottom: 4rem;              /* MER luft mellom boksene */
-    padding: 1.25rem 1.5rem;          /* litt innvendig luft så det ser penere ut */
-    background: rgba(0,0,0,0.12);     /* valgfritt, bare så man ser blokka */
-    border-radius: 8px;               /* valgfritt */
-    transform: translateX(-150px);
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
-  }
-  
-  .box.show {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  /* selve første artikkelen som har alle boxene */
-  .animationWindow {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+  margin-bottom: 4rem; /* MER luft mellom boksene */
+  padding: 1.25rem 1.5rem; /* litt innvendig luft så det ser penere ut */
+  background: rgba(0, 0, 0, 0.12); /* valgfritt, bare så man ser blokka */
+  border-radius: 8px; /* valgfritt */
+  transform: translateX(-150px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
 
-  }
-  
-  .space{
-    margin-top: 10rem;
-    margin-bottom: 12rem;
-  }
+.box.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* selve første artikkelen som har alle boxene */
+.animationWindow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.space {
+  margin-top: 10rem;
+  margin-bottom: 12rem;
+}
+
+footer {
+  margin: 80px 0 40px;
+  padding: 40px 0;
+}
