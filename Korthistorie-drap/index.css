@@ -71,26 +71,42 @@ article.is-focused {
   position: relative;
   width: 100%;
   margin: 20px auto;
-  position: relative;
-  width: 100%;
-  margin: 20px auto;
+  overflow: hidden;
 }
 
-img {
-  position: relative;
-  width: 100%;
-  margin: 20px auto;
-}
-
-
-#hoverVideo {
+.video-wrapper video,
+.video-wrapper .video-overlay {
   width: 100%;
   display: block;
-  cursor: pointer;
   background-color: #000;
+}
+
+.content-image {
   position: relative;
   width: 100%;
   margin: 20px auto;
+}
+
+#hoverVideo {
+  cursor: pointer;
+  position: relative;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  margin: 0;
+}
+
+.video-overlay.is-hidden {
+  opacity: 0;
 }
 
 footer {

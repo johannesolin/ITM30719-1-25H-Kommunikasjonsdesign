@@ -1,21 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Hover-to-Play video funksjonalitet (Uendret)
   const video = document.getElementById("hoverVideo");
+  const overlay = document.querySelector(".video-overlay");
+
+  const hideOverlay = () => {
+    if (overlay) {
+      overlay.classList.add("is-hidden");
+    }
+  };
+
+  const showOverlay = () => {
+    if (overlay) {
+      overlay.classList.remove("is-hidden");
+    }
+  };
 
   if (video) {
     const startVideo = () => {
       if (video.paused) {
-        video.play().catch((error) => {});
+        video.play().then(hideOverlay).catch((error) => {});
+      } else {
+        hideOverlay();
       }
     };
 
     const stopVideo = () => {
       video.pause();
       video.currentTime = 0;
+      showOverlay();
     };
 
     video.addEventListener("mouseenter", startVideo);
     video.addEventListener("mouseleave", stopVideo);
+    video.addEventListener("play", hideOverlay);
+    video.addEventListener("pause", showOverlay);
+    video.addEventListener("ended", showOverlay);
   }
 
   // Fokus funksjonalitet
