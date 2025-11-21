@@ -143,24 +143,32 @@
 
 
 
-
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // === LEAFLET-KART MED FULLSKJERM-ZOOM-IN ===
+        // Opprett kart – ingen interaksjoner aktivert
         const map = L.map("map", {
           zoomControl: false,
           attributionControl: false,
-        }).setView([53.0, -3.0], 5); // Start: oversikt over Storbritannia
-
-        // Basiskart
+          dragging: false,
+          scrollWheelZoom: false,
+          touchZoom: false,
+          doubleClickZoom: false,
+          boxZoom: false,
+          keyboard: false,
+        }).setView([53.0, -3.0], 5);
+      
+        // Basemap
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           opacity: 0.9,
         }).addTo(map);
-
-        // Marker Anfield
+      
+        // Punktet vi flyr inn til
         const anfield = [53.4308, -2.9609];
-
-        // Automatisk "flyreise" inn til Anfield
+      
+        // Marker (hvis du vil ha popup)
+        const marker = L.marker(anfield).addTo(map).bindPopup("Anfield");
+      
+        // Start "video-zoom" etter liten delay
         setTimeout(() => {
           map.flyTo(anfield, 17, {
             animate: true,
@@ -168,25 +176,12 @@
           });
           marker.openPopup();
         }, 1200);
-
-        // Etter zoom-animasjonen: lås kartet og tillat scrolling videre
+      
+        // Sperr alle museklikk etter animasjon, som en video
         setTimeout(() => {
-          // Fjern scroll-lås på body
-          document.body.classList.remove("no-scroll");
-
-          // Deaktiver all kartinteraksjon slik at brukeren bare kan scrolle videre
-          map.dragging.disable();
-          map.touchZoom.disable();
-          map.doubleClickZoom.disable();
-          map.scrollWheelZoom.disable();
-          map.boxZoom.disable();
-          map.keyboard.disable();
-          if (map.tap) map.tap.disable();
-
-          // Fjern fokus fra kartet
           document.getElementById("map").style.pointerEvents = "none";
-        }, 8200); // ~7s animasjon + 1.2s forsinkelse
-
+        }, 8200);
+      
         // === Scroll-animasjon for logoer og historie ===
         const elements = document.querySelectorAll(".logo, .story-section");
         const observer = new IntersectionObserver(
@@ -202,8 +197,11 @@
         );
         elements.forEach((el) => observer.observe(el));
       });
-    </script>
-    <!-- Leaflet bibliotek -->
+      </script>
+
+      <!-- Jeg har brukt CHATGPT til å gjøre karetet til en "Video" som ikke er scrollbar: https://chatgpt.com/share/69203d4c-0a58-800c-b14d-73618ee2ac33 -->
+   
+   <!-- Leaflet bibliotek -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
