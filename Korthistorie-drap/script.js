@@ -18,7 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (video) {
     const startVideo = () => {
       if (video.paused) {
-        video.play().then(hideOverlay).catch((error) => {});
+        // Bruker .then() for å forsikre at overlay kun skjules ved vellykket avspilling
+        video
+          .play()
+          .then(hideOverlay)
+          .catch((error) => {});
       } else {
         hideOverlay();
       }
@@ -37,10 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
     video.addEventListener("ended", showOverlay);
   }
 
-  // Fokus funksjonalitet
+  // 2. Fokus funksjonalitet (Uendret logikk)
   const articles = document.querySelectorAll("main article");
 
-  // Setter fokuspunktet til 50 piksler fra toppen for maksimal følsomhet
+  // Setter fokuspunktet til 350 piksler fra toppen
   const focusThreshold = 350;
 
   const checkArticleFocus = () => {
@@ -68,8 +72,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  window.addEventListener("scroll", checkArticleFocus);
-  window.addEventListener("resize", checkArticleFocus);
+  // 3. SCROLL REVEAL / FLY INN FUNKSJONALITET (Nytt)
+  const mainArticles = document.querySelectorAll(".main-content article");
+  // Setter terskelen for når elementet skal fly inn (150px fra bunnen av viewport)
+  const revealThreshold = window.innerHeight - 150;
 
-  checkArticleFocus();
+  const checkScrollReveal = () => {
+    mainArticles.forEach((article) => {
+      const rect = article.getBoundingClientRect();
+
+      // Legger til "is-visible" klassen når elementet er innenfor revealThreshold
+      // Det sjekkes også om elementet allerede har klassen, for å unngå unødvendige operasjoner
+      if (
+        rect.top <= revealThreshold &&
+        !article.classList.contains("is-visible")
+      ) {
+        article.classList.add("is-visible");
+      }
+      // Valgfritt: Hvis du vil at de skal forsvinne når de scroller ut av syne (for å kunne vises igjen)
+      // if (rect.bottom < 0 || rect.top > window.innerHeight) {
+      //     article.classList.remove("is-visible");
+      // }
+    });
+  };
+
+  // Kombinerer funksjonene for scroll og resize events
+  const handleScrollAndResize = () => {
+    checkArticleFocus();
+    checkScrollReveal();
+  };
+
+  window.addEventListener("scroll", handleScrollAndResize);
+  window.addEventListener("resize", handleScrollAndResize);
+
+  // Kjører funksjonene én gang ved oppstart for å sette initial state
+  handleScrollAndResize();
 });
